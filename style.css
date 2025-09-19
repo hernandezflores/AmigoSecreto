@@ -171,3 +171,8 @@ background-color: var(--color-button-reiniciar);
 padding: 10px 40px;
 color:var(--color-white)
 }
+
+#botonReiniciar{
+    display:none;
+}
+
