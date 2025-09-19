@@ -48,18 +48,24 @@ function actualizarLista() {
   }
 }
 
-function sortearAmigo(){
+function sortearAmigo() {
+  if (nombres.length === 0) {
+    alert("No hay nombres para sortear");
+    return;
+  }
 
-    if (nombres.length === 0) {
-        alert("No hay nombres para sortear");
-        return;
-      }
+  let sortear = Math.floor(Math.random() * nombres.length);
+  let nombreSeleccionado = nombres[sortear];
 
-   let sortear = Math.floor(Math.random() * nombres.length);
-   let nombreSeleccionado = nombres[sortear];
-   console.log(nombreSeleccionado);
-   asignarTextoElemeno("h2", `Tu amigo secreto es: ${nombreSeleccionado}`);
-} 
+  // Mostrar el resultado
+  asignarTextoElemeno("h2", `Tu amigo secreto es: ${nombreSeleccionado}`);
+
+  // Limpiar la lista visual
+  document.getElementById("listaAmigos").innerHTML = "";
+
+  // Opcional: vaciar el array si no querés que se vuelva a sortear
+  // nombres = [];
+}
 
 function reiniciarJuego() {
   // Vaciar el array
