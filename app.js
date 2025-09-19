@@ -61,6 +61,22 @@ function sortearAmigo(){
    asignarTextoElemeno("h2", `Tu amigo secreto es: ${nombreSeleccionado}`);
 } 
 
+function reiniciarJuego() {
+  // Vaciar el array
+  nombres = [];
+
+  // Limpiar la lista en pantalla
+  document.getElementById("listaAmigos").innerHTML = "";
+
+  // Borrar el resultado del sorteo
+  asignarTextoElemeno("h2", "");
+
+  // Limpiar caja de texto
+  limpiarCaja();
+
+  console.log("Juego reiniciado");
+}
+
 document.getElementById("amigo").addEventListener("keydown", (event) => { 
   if (event.key === "Enter"){
     event.preventDefault();

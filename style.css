@@ -1,11 +1,12 @@
 :root {
-    --color-primary: #4B69FD;
+    --color-primary: #5080b1;
     --color-secondary: #FFF9EB;
     --color-tertiary: #C4C4C4;
     --color-button: #fe652b;
-    --color-button-hover: #e55720;
+    --color-button-hover: #cf6035;
     --color-text: #444444;
     --color-white: #FFFFFF;
+    --color-button-reiniciar:rgb(137, 136, 136); 
 }
 
 /* Estilos generales */
@@ -89,7 +90,10 @@ body {
 
 .button-container {
     width: 300px;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    gap: 30px;
 }
 
 /* Estilos de entrada de texto */
@@ -145,6 +149,7 @@ ul {
 /* Botón de sortear título */
 .button-draw {
     display: flex;
+    gap: 10;
     align-items: center;
     width: 100%;
     padding: 10px 40px;
@@ -159,4 +164,10 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+.button-reinicio-juego{  /*SE AGREGO ESTAS LINEAS*/
+background-color: var(--color-button-reiniciar);
+padding: 10px 40px;
+color:var(--color-white)
 }
